@@ -1,6 +1,7 @@
-#import "CPTemplate.h"
+#import "Custom.h"
+#import <Cordova/CDVPluginResult.h>
 
-@implementation CPTemplate
+@implementation Custom
 
 - (void)echo:(CDVInvokedUrlCommand*)command
 {

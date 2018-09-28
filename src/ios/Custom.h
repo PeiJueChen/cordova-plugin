@@ -1,6 +1,6 @@
-﻿#import <Cordova/CDV.h>
+﻿#import <Cordova/CDVPlugin.h>
 
-@interface CPTemplate : CDVPlugin
+@interface Custom : CDVPlugin
 
 - (void)echo : (CDVInvokedUrlCommand*)command;
 - (void)openUrl : (CDVInvokedUrlCommand*)command;

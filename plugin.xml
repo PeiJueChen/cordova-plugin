@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- id通常是this-is-a-plugin的形式，就像cordova-plugin-device（作为示例） -->
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-template" version="0.0.1">
-  <name>Template</name>
-  <description>Cordova Plugin Template</description>
-  <keywords>cordova, plugin, template</keywords>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-custom" version="0.1.0">
+  <name>cordova.plugins.custom</name>
+  <description>Cordova Plugin Custom</description>
+  <keywords>cordova, plugin, custom</keywords>
   <license>MIT</license>
 
 <!-- 可以提前引入, js使用:  cordova.exec , 也可以用到再引入-->
@@ -14,13 +14,13 @@
 
   <!--  js 文件 , 可以導入多個 -->
   <!-- clobbers: 就是使用的class 名 -->
-  <!-- e.g: window.cordova.plugins.template-->
-  <js-module src="www/template.js" name="template">
-    <clobbers target="cordova.plugins.template" />
+  <!-- e.g: window.cordova.plugins.custom-->
+  <js-module src="www/custom.js" name="custom">
+    <clobbers target="cordova.plugins.custom" />
   </js-module>
   <js-module src="www/PositionError.js" name="PositionError">
-            <clobbers target="PositionError" />
-        </js-module>
+    <clobbers target="PositionError" />
+  </js-module>
 
   <!-- android -->
   <!-- <platform name="android">
@@ -35,8 +35,8 @@
   <!-- ios -->
   <platform name="ios">
     <config-file target="config.xml" parent="/*">
-      <feature name="Template">
-        <param name="ios-package" value="CPTemplate" onload="true" />
+      <feature name="cordova.plugins.custom">
+        <param name="ios-package" value="cordova.plugins.custom" />
       </feature>
     </config-file>
 
@@ -64,8 +64,8 @@
 
     
     <!-- 本地文件 -->
-    <header-file src="src/ios/CPTemplate.h" />
-    <source-file src="src/ios/CPTemplate.m" />
+    <header-file src="src/ios/Custom.h" />
+    <source-file src="src/ios/Custom.m" />
 
     <!-- 系統庫 -->
     <!-- alipay depen -->

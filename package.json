@@ -1,8 +1,8 @@
 {
-    "version": "0.0.1",
+    "version": "0.1.0",
     "name": "cordova-plugin",
-    "cordova_name": "CordovaPluginTemplate",
-    "description": "Cordova Plugin Template",
+    "cordova_name": "CordovaPluginCustom",
+    "description": "Cordova Plugin custom",
     "license": "Apache 2.0",
     "author": {
         "name": "Raphael Hirtenfelder",
@@ -18,6 +18,6 @@
     "keywords": [
         "cordova",
         "plugin",
-        "template"
+        "custom"
     ]
 }

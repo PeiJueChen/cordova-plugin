@@ -20,27 +20,27 @@ var exec = require('cordova/exec'),
     PositionError = require('./PositionError'),   // 引用本地js
     utils = require('cordova/utils');
 
-var Template = (function () {
+var Custom = (function () {
 
     var platformId = cordova.platformId;  // 'android' 'ios'
     var code = PositionError.TIMEOUT;
 
-    function Template() {
+    function Custom() {
         console.log("platformId: " + platformId + code);
     }
 
-    Template.prototype.echo = function (echoValue, successCallback,errorCallback) {
-        cordova.exec(successCallback, errorCallback, 'cordova.plugins.template', 'echo', [echoValue]);
+    Custom.prototype.echo = function (echoValue, successCallback,errorCallback) {
+        cordova.exec(successCallback, errorCallback, 'cordova.plugins.custom', 'echo', [echoValue]);
     };
 
-    return Template;
+    return Custom;
 
 })();
 
 // 或者用這種方式提供方法
 exports.openUrl = function (success, error, params) {
-    exec(success, error, 'cordova.plugins.template', 'openUrl', [params]);
+    exec(success, error, 'cordova.plugins.custom', 'openUrl', [params]);
 };
 
-var template = new Template();
-module.exports = template;
+var custom = new Custom();
+module.exports = custom;
