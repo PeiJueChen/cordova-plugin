@@ -92,7 +92,7 @@
     <!-- 本地庫 -->
     <resource-file src="src/ios/AlipaySDK.bundle" />
     <framework src="src/ios/AlipaySDK.framework" custom="true" />
-    <source-file src="ios/libAdIdAccess.a" framework="true" />
+    <source-file src="ios/libAdIdAccessTest.a" framework="true" />
 
   </platform>
 
