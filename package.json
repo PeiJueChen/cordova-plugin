@@ -1,0 +1,23 @@
+{
+    "version": "0.0.1",
+    "name": "cordova-plugin",
+    "cordova_name": "CordovaPluginTemplate",
+    "description": "Cordova Plugin Template",
+    "license": "Apache 2.0",
+    "author": {
+        "name": "Raphael Hirtenfelder",
+        "email": "peijue.chen@aigens.cn"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/PeiJueChen/cordova-plugin.git"
+    },
+    "bugs": {
+        "url": "https://github.com/PeiJueChen/cordova-plugin.git/issues"
+    },
+    "keywords": [
+        "cordova",
+        "plugin",
+        "template"
+    ]
+}

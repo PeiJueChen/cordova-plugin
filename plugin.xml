@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- id通常是this-is-a-plugin的形式，就像cordova-plugin-device（作为示例） -->
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-template" version="0.0.1">
+  <name>Template</name>
+  <description>Cordova Plugin Template</description>
+  <keywords>cordova, plugin, template</keywords>
+  <license>MIT</license>
+
+<!-- 可以提前引入, js使用:  cordova.exec , 也可以用到再引入-->
+  <!-- <engines>
+		<engine name="cordova" version=">=4.0.0" />
+	</engines> -->
+
+  <!--  js 文件 , 可以導入多個 -->
+  <!-- clobbers: 就是使用的class 名 -->
+  <!-- e.g: window.cordova.plugins.template-->
+  <js-module src="www/template.js" name="template">
+    <clobbers target="cordova.plugins.template" />
+  </js-module>
+  <js-module src="www/PositionError.js" name="PositionError">
+            <clobbers target="PositionError" />
+        </js-module>
+
+  <!-- android -->
+  <!-- <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Template" >
+        <param name="android-package" value="cordova.plugin.Template"/>
+      </feature>
+    </config-file>
+    <source-file src="src/android/Template.java" target-dir="src/cordova/plugin" />
+  </platform> -->
+
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="Template">
+        <param name="ios-package" value="CPTemplate" onload="true" />
+      </feature>
+    </config-file>
+
+  <!-- 配置info 文件 -->
+    <preference name="GEOLOCATION_USAGE_DESCRIPTION" default=" " />
+    <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+        <string>$GEOLOCATION_USAGE_DESCRIPTION</string>
+    </config-file>
+
+  <!-- add url schemes -->
+    <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+			<array>
+				<dict>
+					<key>CFBundleTypeRole</key>
+					<string>Editor</string>
+					<key>CFBundleURLSchemes</key>
+					<array>
+						<string>prefs</string>
+					</array>
+				</dict>
+			</array>
+		</config-file>
+
+
+
+    
+    <!-- 本地文件 -->
+    <header-file src="src/ios/CPTemplate.h" />
+    <source-file src="src/ios/CPTemplate.m" />
+
+    <!-- 系統庫 -->
+	  <framework src="libstdc++.dylib" />
+    <framework src="libc++.dylib" />
+    <framework src="libz.tbd" />
+    <framework src="AssetsLibrary.framework" />
+    <framework src="CoreText.framework" />
+    <framework src="CoreTelephony.framework" />
+    <framework src="CoreGraphics.framework" />
+    <framework src="Foundation.framework" />
+    <framework src="MobileCoreServices.framework" />
+    <framework src="Photos.framework" />
+    <framework src="QuartzCore.framework" />
+    <framework src="QuickLook.framework" />
+    <framework src="Security.framework" />
+    <framework src="SystemConfiguration.framework" />
+    <framework src="UIKit.framework" />
+
+  <!-- pod framework -->
+    <!-- <pod id="Flurry-iOS-SDK/FlurrySDK"/> -->
+    <!-- 也是pod framework , 這種方式也可以 -->
+    <!-- <framework src="OrderPlaceSdk" type="podspec" spec="~> 0.1.3" /> -->
+
+    <!-- 本地庫 -->
+    <resource-file src="src/ios/HockeySDK.embeddedframework/HockeySDKResources.bundle" />
+    <framework src="src/ios/HockeySDK.embeddedframework/HockeySDK.framework" custom="true" />
+
+  </platform>
+
+</plugin>
