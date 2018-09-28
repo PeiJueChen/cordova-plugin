@@ -30,12 +30,12 @@ var Custom = (function () {
     }
 
     Custom.prototype.echo = function (echoValue, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, 'cordova.plugins.custom', 'echo', [echoValue]);
+        cordova.exec(successCallback, errorCallback, 'Custom', 'echo', [echoValue]);
     };
 
 
     Custom.prototype.openUrl = function (params, success, error) {
-        cordova.exec(success, error, 'cordova.plugins.custom', 'openUrl', [params]);
+        cordova.exec(success, error, 'Custom', 'openUrl', [params]);
     };
 
     return Custom;
