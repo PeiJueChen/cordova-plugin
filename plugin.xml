@@ -68,7 +68,7 @@
     <source-file src="src/ios/CPTemplate.m" />
 
     <!-- 系統庫 -->
-	  <framework src="libstdc++.dylib" />
+	  <!-- <framework src="libstdc++.dylib" />
     <framework src="libc++.dylib" />
     <framework src="libz.tbd" />
     <framework src="AssetsLibrary.framework" />
@@ -80,7 +80,7 @@
     <framework src="Photos.framework" />
     <framework src="QuartzCore.framework" />
     <framework src="QuickLook.framework" />
-    <framework src="Security.framework" />
+    <framework src="Security.framework" /> -->
     <framework src="SystemConfiguration.framework" />
     <framework src="UIKit.framework" />
 
