@@ -35,8 +35,10 @@
   <!-- ios -->
   <platform name="ios">
     <config-file target="config.xml" parent="/*">
-      <feature name="cordova.plugins.custom">
-        <param name="ios-package" value="cordova.plugins.custom" />
+
+    <!--  value /  name  : 用class 的名字 NOTED -->
+      <feature name="Custom">
+        <param name="ios-package" value="Custom" />  
       </feature>
     </config-file>
 

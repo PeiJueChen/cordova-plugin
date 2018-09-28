@@ -13,7 +13,7 @@
  */
 
 
- // prototype 屬於是為class 添加方法/屬於用到的
+// prototype 屬於是為class 添加方法/屬於用到的
 var exec = require('cordova/exec'),
     cordova = require('cordova'),
     channel = require('cordova/channel'),
@@ -29,18 +29,20 @@ var Custom = (function () {
         console.log("platformId: " + platformId + code);
     }
 
-    Custom.prototype.echo = function (echoValue, successCallback,errorCallback) {
+    Custom.prototype.echo = function (echoValue, successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, 'cordova.plugins.custom', 'echo', [echoValue]);
+    };
+
+
+    Custom.prototype.openUrl = function (params, success, error) {
+        exec(success, error, 'cordova.plugins.custom', 'openUrl', [params]);
     };
 
     return Custom;
 
 })();
 
-// 或者用這種方式提供方法
-exports.openUrl = function (success, error, params) {
-    exec(success, error, 'cordova.plugins.custom', 'openUrl', [params]);
-};
+
 
 var custom = new Custom();
 module.exports = custom;
