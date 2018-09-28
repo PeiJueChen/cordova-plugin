@@ -94,7 +94,7 @@
     <header-file src="src/ios/WechtSDK1.8.2/WechatAuthSDK.h" />
     <header-file src="src/ios/WechtSDK1.8.2/WXApi.h" />
     <header-file src="src/ios/WechtSDK1.8.2/WXApiObject.h" />
-    <header-file src="src/ios/WechtSDK1.8.2/README.text" />
+    <header-file src="src/ios/WechtSDK1.8.2/README.txt" />
     <source-file src="src/ios/WechtSDK1.8.2/libWeChatSDK.a" framework="true" />
 
     <resource-file src="src/ios/AlipaySDK.bundle" />
