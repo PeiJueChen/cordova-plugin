@@ -16,9 +16,10 @@ cordova plugin add https://github.com/PeiJueChen/cordova-plugin.git
 If the plugin was added to your Cordova (or Ionic) project, you may use it like that:
 
 ```
-(<any>window).cordova.plugins.custom.openUrl((s)=> {
-          console.log('openUrl success',s);
-        },err=> {
-          console.log('openUrl err',err);
-        },{ url: "https://www.google.com/" })
+    (<any>window).cordova.plugins.custom.openUrl({ url: "https://www.google.com/" },
+        (s) => {
+          console.log('openUrl s', s);
+        }, err => {
+          console.log('openUrl err', err);
+    })
 ```

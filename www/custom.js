@@ -7,7 +7,7 @@
  * exec(callback, errorCallback, pluginName, actionName, argumentArray)
  * callback 插件成功返回时调用，并将本机插件中的任何参数传递给它
  * errorCallback在插件遇到错误时调用。我们在上面省略了这一点
- * pluginName 是本机端的插件类名称。
+ * pluginName 是本机端的插件类名称。就是类名
  * actionName 是我们将在本机方面执行的操作。
  * argumentArray 是传递给本机端的参数数组
  */
