@@ -16,7 +16,7 @@
   <!-- clobbers: 就是使用的class 名 -->
   <!-- e.g: window.cordova.plugins.custom-->
   <js-module src="www/custom.js" name="custom">
-    <clobbers target="cordova.plugins.custom" />
+    <clobbers target="cordova.plugin.custom" />
   </js-module>
   <js-module src="www/PositionError.js" name="PositionError">
     <clobbers target="PositionError" />
