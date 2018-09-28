@@ -1,6 +1,6 @@
 ﻿# cordova-plugin
 
-This is my personal [Apache Cordova](https://cordova.apache.org) plugin template containing examples for Android and iOS.
+This is my personal [Apache Cordova](https://cordova.apache.org) custom plugin containing examples for Android and iOS.
 
 
 ## Getting started
@@ -16,5 +16,9 @@ cordova plugin add https://github.com/PeiJueChen/cordova-plugin.git
 If the plugin was added to your Cordova (or Ionic) project, you may use it like that:
 
 ```
-(<any>window).cordova.plugins.template.openUrl({url:"https://www.google.com/"})
+(<any>window).cordova.plugins.custom.openUrl((s)=> {
+          console.log('openUrl success',s);
+        },err=> {
+          console.log('openUrl err',err);
+        },{ url: "https://www.google.com/" })
 ```
