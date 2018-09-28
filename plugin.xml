@@ -90,7 +90,13 @@
     <!-- <framework src="OrderPlaceSdk" type="podspec" spec="~> 0.1.3" /> -->
 
     <!-- 本地庫 -->
-    <source-file src="ios/libAdIdAccessTest.a" framework="true" />
+
+    <header-file src="src/ios/WechtSDK1.8.2/WechatAuthSDK.h" />
+    <header-file src="src/ios/WechtSDK1.8.2/WXApi.h" />
+    <header-file src="src/ios/WechtSDK1.8.2/WXApiObject.h" />
+    <header-file src="src/ios/WechtSDK1.8.2/README.text" />
+    <source-file src="src/ios/WechtSDK1.8.2/libWeChatSDK.a" framework="true" />
+
     <resource-file src="src/ios/AlipaySDK.bundle" />
     <framework src="src/ios/AlipaySDK.framework" custom="true" />
     
