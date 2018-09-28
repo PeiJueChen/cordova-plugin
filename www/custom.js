@@ -35,7 +35,7 @@ var Custom = (function () {
 
 
     Custom.prototype.openUrl = function (params, success, error) {
-        exec(success, error, 'cordova.plugins.custom', 'openUrl', [params]);
+        cordova.exec(success, error, 'cordova.plugins.custom', 'openUrl', [params]);
     };
 
     return Custom;

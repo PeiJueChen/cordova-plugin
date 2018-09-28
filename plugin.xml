@@ -2,7 +2,7 @@
 
 <!-- id通常是this-is-a-plugin的形式，就像cordova-plugin-device（作为示例） -->
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-custom" version="0.1.0">
-  <name>cordova.plugins.custom</name>
+  <name>Custom</name>
   <description>Cordova Plugin Custom</description>
   <keywords>cordova, plugin, custom</keywords>
   <license>MIT</license>
